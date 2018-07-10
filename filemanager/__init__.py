@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.core.servers.basehttp import FileWrapper
 from django import forms
 from PIL import Image
 import settings
@@ -11,6 +10,8 @@ import re
 import tarfile
 import zipfile
 import magic
+
+from wsgiref.util import FileWrapper
 
 path_end = r'(?P<path>[\w\d_ -/.]*)$'
 
